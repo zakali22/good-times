@@ -28,13 +28,13 @@ img {
 }
 
 h1, .h1 {
-    font-size: 10.1rem;
+    font-size: 12rem;
     line-height: 1;
     font-family: 'HKGrotesk Bold';
 }
 
 h2, .h2 {
-    font-size: 12rem;
+    font-size: 10.1rem;
     line-height: 1;
     font-family: 'HKGrotesk Bold'; 
 }
@@ -60,3 +60,41 @@ a {
     }
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+button, a {
+    &.btn {
+        padding: 24px 72px;
+        background: none;
+        border: 2px solid black;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        cursor: pointer;
+        &:hover, &:focus {
+            background-color: black;
+            color: white;
+        }
+    }
+    &.btn-primary {
+        border: 2px solid $orange;
+        background-color: $orange;
+        color: white;
+        &:hover, &:focus {
+            background: white;
+            color: $orange;
+        }
+    }
+}
+
+.stroked-heading {
+    color: #fff;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: #fff;
+    -webkit-text-stroke-width: 4px;
+    letter-spacing: 0.08em;
+}

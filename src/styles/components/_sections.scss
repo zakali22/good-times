@@ -1,0 +1,12 @@
+section {
+    &.hero {
+        .hero__container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            padding: 3.2rem 0 6.4rem 0;
+        }
+    }
+}
