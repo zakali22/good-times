@@ -1,0 +1,44 @@
+// Generic wrappers
+section {
+    height: 100%;
+}
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+    min-height: 100%;
+    padding: 3.2rem 0 0 0;
+}
+
+// Grid layouts
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, [col-start] 1fr);
+    column-gap: 20px;
+}
+
+// Flex layouts
+.flexed {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    &.flexed--column {
+        flex-direction: column;
+    }
+    &.flexed--4 {
+        & > * {
+            flex: 1;
+            width: 33.33%;
+        }
+    }
+    &.flexed--5 {
+        & > * {
+            flex: 1;
+            width: 41.66%;
+        }
+    }
+    &.flexed--no-wrap {
+        flex-wrap: nowrap;
+        overflow: hidden;
+        // overflow-x: scroll
+    }
+}

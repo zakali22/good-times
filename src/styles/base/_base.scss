@@ -16,7 +16,7 @@ body {
     font-family: 'HKGrotesk Regular';
     background-image: url('/assets/images/background.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: top center;
     position: relative;
 }
@@ -39,6 +39,10 @@ h2, .h2 {
     font-family: 'HKGrotesk Bold'; 
 }
 
+p {
+    font-size: 2rem;
+}
+
 blockquote {
     font-size: 3.6rem;
 
@@ -58,12 +62,6 @@ a {
     &:hover, &:focus {
         color: inherit;
     }
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    height: 100%;
 }
 
 button, a {
@@ -97,4 +95,13 @@ button, a {
     -webkit-text-stroke-color: #fff;
     -webkit-text-stroke-width: 4px;
     letter-spacing: 0.08em;
+
+    &--main {
+        -webkit-text-stroke-width: 3px;
+        letter-spacing: 0;
+    }
+    &--orange {
+        color: $orange;
+        -webkit-text-stroke-color: $orange;
+    }
 }
