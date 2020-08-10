@@ -16,11 +16,12 @@ body {
     font-family: 'HKGrotesk Regular';
     background-image: url('/assets/images/background.jpg');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 100% auto; // x y
     background-position: top center;
     position: relative;
     @media(max-width: 991px){
         font-size: 1.8rem;
+        background-size: auto 120vh;
     }
 }
 
@@ -40,6 +41,9 @@ h1, .h1 {
     }
     @media(max-width: 767px){
         font-size: 7rem;
+    }
+    @media(max-width: 500px){
+        font-size: 5rem;
     }
 }
 
@@ -96,6 +100,7 @@ button, a {
         font-size: 1.8rem;
         text-transform: uppercase;
         font-weight: 700;
+        text-align: center;
         cursor: pointer;
         &:hover, &:focus {
             background-color: black;
@@ -125,10 +130,16 @@ button, a {
     @media(max-width: 1200px){
         letter-spacing: 0.06em;
     }
+    @media(max-width: 500px){
+        -webkit-text-stroke-width: 2px;
+    }
 
     &--main {
         -webkit-text-stroke-width: 3px;
         letter-spacing: 0;
+        @media(max-width: 500px){
+            -webkit-text-stroke-width: 2px;
+        }
     }
     &--orange {
         color: $orange;

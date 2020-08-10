@@ -39,6 +39,8 @@ section {
     &.flexed--no-wrap {
         flex-wrap: nowrap;
         overflow: hidden;
-        // overflow-x: scroll
+        @media(max-width: 800px){
+            overflow: unset;
+        }
     }
 }

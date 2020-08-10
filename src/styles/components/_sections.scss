@@ -18,6 +18,21 @@ section {
             align-items: center;
             padding: 3.2rem 0 6.4rem 0;
             min-height: inherit;
+            .hero__title {
+                @media(max-width: 500px){
+                    text-align: center;
+                }
+            }
+            .header__nav--logo {
+                @media(max-width: 500px){
+                    width: 190px;
+                }
+            }
+            .header__nav--links {
+                @media(max-width: 500px){
+                    font-size: 1.7rem;
+                }     
+            }
         }
     }
     // About section
@@ -107,7 +122,17 @@ section {
 
     // Speakers section
     &.speakers {
+        .speakers__listing {
+            @media(max-width: 991px){
+                flex-wrap: wrap;
+            }
+        }
         .speakers__item {
+            @media(max-width: 991px){
+                flex: 0 0 auto;
+                width: 50%;
+                margin-bottom: 3rem;
+            }
             figure {
 
             }
@@ -127,8 +152,22 @@ section {
 
     // Schedule section
     &.schedule {
-        .schedule__listing {
+        .schedule__listing.flexed.flexed--no-wrap {
             border: 3px solid $orange;
+            @media(max-width: 800px){
+                overflow-x: scroll;
+            }
+            &::-webkit-scrollbar {
+                width: 20px;
+            }
+            &::-webkit-scrollbar-track {
+                background: $white;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: $orange;
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
         }
         .schedule__date {
             display: inline-block;
@@ -237,6 +276,11 @@ section {
             & > * {
                 flex: 1;
             }
+            @media(max-width: 500px){
+                & > *:first-child {
+                    display: none;
+                }
+            }
         }
     }
     
@@ -245,9 +289,15 @@ section {
         .image {
             &:first-of-type {
                 grid-column: col-start 2 / span 5;
+                @media(max-width: 500px) {
+                    grid-column: col-start / -1;
+                }
             }
             &:nth-of-type(2) {
                 grid-column: col-start 8 / -1;
+                @media(max-width: 500px) {
+                    grid-column: col-start / -1;
+                }
             }
         }
     }
