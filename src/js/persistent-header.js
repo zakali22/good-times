@@ -6,7 +6,7 @@ function addContentWithinPersistentHeader(){
 }
 
 function revealPersistentHeader(){
-    const topOfWindow = pageYOffset;
+    const topOfWindow = window.pageYOffset;
     const heroHeaderBottom = heroHeader.getBoundingClientRect().bottom;
 
     if(heroHeaderBottom < topOfWindow){

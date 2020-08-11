@@ -146,3 +146,14 @@ button, a {
         -webkit-text-stroke-color: $orange;
     }
 }
+
+// Fading animation flicker fix
+h1, h2, .h1, p, .btn, figure, .register__container, .schedule__listing {
+    opacity: 0;
+}
+
+// Keyframes
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
