@@ -4,6 +4,9 @@ section {
     .container > div {
         margin-bottom: 6.4rem;
     }
+    @media(max-width: 1200px){
+        padding: 0 4rem;
+    }
     // Hero section
     &.hero {
         margin-top: 0;
@@ -15,6 +18,21 @@ section {
             align-items: center;
             padding: 3.2rem 0 6.4rem 0;
             min-height: inherit;
+            .hero__title {
+                @media(max-width: 500px){
+                    text-align: center;
+                }
+            }
+            .header__nav--logo {
+                @media(max-width: 500px){
+                    width: 190px;
+                }
+            }
+            .header__nav--links {
+                @media(max-width: 500px){
+                    font-size: 1.7rem;
+                }     
+            }
         }
     }
     // About section
@@ -31,23 +49,36 @@ section {
                     // layout 
                     grid-column: col-start / span 7;
                     font-family: 'HKGrotesk Bold'; 
+                    @media(max-width: 991px){
+                        grid-column: col-start / -2;
+                    }
                 }
-            }
-            .stroked-heading {
-                color: $orange;
-                -webkit-text-stroke-width: 3px;
-                -webkit-text-stroke-color: $orange;
-                letter-spacing: 0.05em;
             }
         }
 
         .about__images {
             .about__images--image-1 {
                 grid-column: col-start 9 / span 4;
+                @media(max-width: 1200px){
+                    grid-column: col-start 8 / -1;
+                }
+                @media(max-width: 600px){
+                    grid-column: col-start / -1;
+                    // justify-self: center;
+                }
             }
             .about__images--image-2 {
                 grid-column: col-start / span 5;
                 margin-top: 70px;
+                @media(max-width: 991px){
+                    grid-column: col-start / span 6;
+                }
+                @media(max-width: 600px){
+                    grid-column: col-start / -1;
+                    // justify-self: center;
+                    margin-top: 0;
+                    margin-bottom: 50px;
+                }
             }
         }
 
@@ -55,11 +86,25 @@ section {
             .about__author--image {
                 grid-column: col-start 3 / span 4;
                 margin-top: 70px;
+                @media(max-width: 991px){
+                    grid-column: col-start 2 / span 5;
+                }
+                @media(max-width: 600px){
+                    grid-column: col-start / -1;
+                    margin-top: 0;
+                    margin-bottom: 50px;
+                }
             }
             .about__author--text {
                 grid-column: col-start 9 / -1;
                 color: $orange;
                 font-weight: 600;
+                @media(max-width: 991px){
+                    grid-column: col-start 8 / -1;
+                }
+                @media(max-width: 600px){
+                    grid-column: col-start / -1;
+                }
                 .about__author--name {
                     border: 3px solid #ff3c15;
                     border-radius: 50%;
@@ -67,6 +112,9 @@ section {
                     margin-top: 20px;
                     text-transform: uppercase;
                     display: inline-block; // sets it as a block but contained to its exact width
+                    @media(max-width: 767px){
+                        font-size: 1.6rem
+                    }
                 }
             }
         }
@@ -74,7 +122,17 @@ section {
 
     // Speakers section
     &.speakers {
+        .speakers__listing {
+            @media(max-width: 991px){
+                flex-wrap: wrap;
+            }
+        }
         .speakers__item {
+            @media(max-width: 991px){
+                flex: 0 0 auto;
+                width: 50%;
+                margin-bottom: 3rem;
+            }
             figure {
 
             }
@@ -94,8 +152,22 @@ section {
 
     // Schedule section
     &.schedule {
-        .schedule__listing {
+        .schedule__listing.flexed.flexed--no-wrap {
             border: 3px solid $orange;
+            @media(max-width: 800px){
+                overflow-x: scroll;
+            }
+            &::-webkit-scrollbar {
+                width: 20px;
+            }
+            &::-webkit-scrollbar-track {
+                background: $white;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: $orange;
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
         }
         .schedule__date {
             display: inline-block;
@@ -204,6 +276,11 @@ section {
             & > * {
                 flex: 1;
             }
+            @media(max-width: 500px){
+                & > *:first-child {
+                    display: none;
+                }
+            }
         }
     }
     
@@ -212,9 +289,15 @@ section {
         .image {
             &:first-of-type {
                 grid-column: col-start 2 / span 5;
+                @media(max-width: 500px) {
+                    grid-column: col-start / -1;
+                }
             }
             &:nth-of-type(2) {
                 grid-column: col-start 8 / -1;
+                @media(max-width: 500px) {
+                    grid-column: col-start / -1;
+                }
             }
         }
     }

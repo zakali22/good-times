@@ -16,13 +16,18 @@ body {
     font-family: 'HKGrotesk Regular';
     background-image: url('/assets/images/background.jpg');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 100% auto; // x y
     background-position: top center;
     position: relative;
+    @media(max-width: 991px){
+        font-size: 1.8rem;
+        background-size: auto 120vh;
+    }
 }
 
 img {
     max-width: 100%;
+    width: 100%;
     height: auto;
     display: block;
 }
@@ -31,21 +36,44 @@ h1, .h1 {
     font-size: 12rem;
     line-height: 1;
     font-family: 'HKGrotesk Bold';
+    @media(max-width: 1200px){
+        font-size: 9rem;
+    }
+    @media(max-width: 767px){
+        font-size: 7rem;
+    }
+    @media(max-width: 500px){
+        font-size: 5rem;
+    }
 }
 
 h2, .h2 {
     font-size: 10.1rem;
     line-height: 1;
     font-family: 'HKGrotesk Bold'; 
+    @media(max-width: 1200px){
+        font-size: 7rem;
+    }
+    @media(max-width: 767px){
+        font-size: 5rem;
+    }
 }
 
 p {
     font-size: 2rem;
+    @media(max-width: 991px){
+        font-size: 1.8rem;
+    }
 }
 
 blockquote {
     font-size: 3.6rem;
-
+    @media(max-width: 991px){
+        font-size: 2.9rem;
+    }
+    // @media(max-width: 767px){
+    //     font-size: 2.1rem;
+    // }
 }
 
 ul {
@@ -72,10 +100,14 @@ button, a {
         font-size: 1.8rem;
         text-transform: uppercase;
         font-weight: 700;
+        text-align: center;
         cursor: pointer;
         &:hover, &:focus {
             background-color: black;
             color: white;
+        }
+        @media(max-width: 767px){
+            padding: 20px 42px;
         }
     }
     &.btn-primary {
@@ -95,10 +127,19 @@ button, a {
     -webkit-text-stroke-color: #fff;
     -webkit-text-stroke-width: 4px;
     letter-spacing: 0.08em;
+    @media(max-width: 1200px){
+        letter-spacing: 0.06em;
+    }
+    @media(max-width: 500px){
+        -webkit-text-stroke-width: 2px;
+    }
 
     &--main {
         -webkit-text-stroke-width: 3px;
         letter-spacing: 0;
+        @media(max-width: 500px){
+            -webkit-text-stroke-width: 2px;
+        }
     }
     &--orange {
         color: $orange;
