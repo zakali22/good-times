@@ -4,7 +4,6 @@
     // top: 0;
     // left: 0;
     // padding: 32px 10px;
-    
     .header__nav {
         display: flex;
         align-items: center;
@@ -27,6 +26,41 @@
             letter-spacing: 0.05em;
             &:not(:last-of-type){
                 margin-right: 2rem;
+            }
+        }
+    }
+}
+
+// Persistent header styling
+.header--desktop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px 0px $charcoal-gray;
+    .header__nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        .header__nav--logo {
+            width: 100%;
+            max-width: 120px;
+        }
+        ul {
+            display: flex;
+            align-items: center;
+            .header__nav--links {
+                text-transform: uppercase;
+                color: $charcoal-gray;
+                font-family: 'HKGrotesk Bold';
+                letter-spacing: 0.05em;
+                margin: 0 1.6rem;
+                &:last-of-type {
+                    color: $orange;
+                }
             }
         }
     }
